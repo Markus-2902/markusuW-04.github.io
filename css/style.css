@@ -1,0 +1,8 @@
+.floated {
+    float:left;
+    margin-right:0px;
+ }
+.floated2{
+    float:left;
+    margin-right: 15px;
+}

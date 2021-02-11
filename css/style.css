@@ -4,5 +4,11 @@
  }
 .floated2{
     float:left;
-    margin-right: 15px;
+    display: inline;
+}
+
+.floated3{
+    float:left;
+    display: inline;
+    font-size: larger;
 }

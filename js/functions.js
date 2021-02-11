@@ -24,9 +24,11 @@ for (let index = 0; index < großbuchstaben.length; index++) {
 
 //wieviele buttons:
 function addemailbuttons(){
+
     const div = document.getElementById("emailnamebuttons");
     const button = document.createElement('button');
     button.className = "floated2";
+
 }
 
 function addtldbuttons(){

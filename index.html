@@ -8,20 +8,38 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Version1_20210210-->
+    <!--Version2_20210211-->
+    <h1>wie viele buttons:</h1> 
     <div>
-        <input type="email" id="email" name="email" value="" class="floated2" placeholder="emailname.TopLevelDomain" disabled>
+        <input type="number" name="" id="emailnamebuttonsnumber" min=0.01 max=20 onkeydown="return false" step="0.01">
+        <input type="number" name="" id="anbieterbuttonsnumber" min="0.01" max=20 onkeydown="return false" step="0.01">
+        <input type="number" name="" id="tldbuttonsnumber" min=0.01 max=4 onkeydown="return false" step="0.01">
     </div>
-    <div id="emailnamebuttons">
+    <div>
+        
+        <div>
+            <input type="email" id="emailname" name="email" value="" class="floated2" placeholder="emailname" readonly>
+            <label class="floated3">@</label>
+            <input type="email" id="anbieter" name="anbieter" value="" class="floated2" placeholder="anbieter" readonly>
+            <label class="floated3">.</label>
+            <input type="email" id="TopLevelDomain" name="TopLevelDomain" value="" class="floated2" placeholder="TopLevelDomain" readonly>
+        </div>
+        <br>
+        <br>
 
+        emailname:
+        <div id="emailnamebuttons">
+
+        </div>
+        anbieter:
+        <div id="anbieterbuttons">
+
+        </div>
+        TopLevelDomain:
+        <div id="tldbuttons">
+            
+        </div>
     </div>
-    <div id="tldbuttons">
-
-    </div>
-
-    <br>
-    <br>
-    <br>
 
     
 </body>

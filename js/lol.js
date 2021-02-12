@@ -24,5 +24,6 @@ for (let index = 0; index < buchstaben.length; index++) {
     großbuchstaben.push(buchstaben[index].toUpperCase());
 }*/
 
-console.log(String.fromCharCode("U+02191"));
-
+//console.log(String.fromCharCode("U+02191"));
+var lol = document.getElementById("e");
+lol.innerHTML = String.fromCharCode("U+02191");

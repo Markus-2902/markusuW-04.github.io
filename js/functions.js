@@ -26,25 +26,32 @@ for (let index = 0; index < buchstaben.length; index++) {
 for (let index = 0; index < großbuchstaben.length; index++) {
     lol2 += großbuchstaben[index];
 }*/
-
-
+var submitbutton = document.getElementById("submitbutton");
+function useadder() {
+    addemailbuttons();
+    addtldbuttons();
+    addanbieterbuttons();
+}
 
 //wieviele buttons:
 function addemailbuttons(){
     const div = document.getElementById("emailnamebuttonsup");
-    const div = document.getElementById("emailnamebuttonsdown");
+    const div2 = document.getElementById("emailnamebuttonsdown");
     var anzahl = document.getElementById("emailnamebuttonsnumber").innerHTML;
     for (let index = 0; index < anzahl; index++) {
         const button = document.createElement('button');
-        button.className = "floated2";
+        button.classList.add("floated2");
         button.id = `button${index}`;
-        button.innerHTML = String.fromCharCode("U+02191");
+        button.innerHTML = "^"
+        document.div.appendChild(button);
     }
     for (let index = 0; index < anzahl; index++) {
-        const button = document.createElement('button');
-        button.className = "floated2";
-        button.id = `button${index}`;
-        button.innerHTML = String.fromCharCode("U+02193");
+        const button2 = document.createElement('button');
+        button.classList.add("floated2");
+        button.classList.add("rotate");
+        button2.id = `button${index}`;
+        button2.innerHTML = "^"
+        document.div2.appendChild(button2);
     }
 }
 
@@ -52,41 +59,48 @@ function addemailbuttons(){
 
 function addtldbuttons(){
     const div = document.getElementById("tdlbuttonsup");
-    const div = document.getElementById("tdlbuttonsdown");
+    const div2 = document.getElementById("tdlbuttonsdown");
     var anzahl = document.getElementById("tdlbuttonsnumber").innerHTML;
     for (let index = 0; index < anzahl; index++) {
         const button = document.createElement('button');
-        button.className = "floated2";
+        button.classList.add("floated2");
         button.id = `button${index}`;
-        button.innerHTML = String.fromCharCode("U+02191");
+        button.innerHTML = "^"
+        document.div.appendChild(button);
     }
+    
     for (let index = 0; index < anzahl; index++) {
-        const button = document.createElement('button');
-        button.className = "floated2";
-        button.id = `button${index}`;
-        button.innerHTML = String.fromCharCode("U+02193");
+        const button2 = document.createElement('button');
+        button2.classList.add("floated2");
+        button2.classList.add("rotate");
+        button2.id = `button${index}`;
+        button2.innerHTML = "^"
+        document.div2.appendChild(button2);
     }
 }
 
 
 
 function addanbieterbuttons(){
-    
+    const div = document.getElementById("anbieterbuttonsup");
+    const div2 = document.getElementById("anbieterbuttonsdown");
+    var anzahl = document.getElementById("anbieterbuttonsnumber").innerHTML;
+    for (let index = 0; index < anzahl; index++) {
+        const button = document.createElement('button');
+        button.classList.add("floated2");
+        button.id = `button${index}`;
+        button.innerHTML = "^";
+        document.div.appendChild(button);
+    }
+    for (let index = 0; index < anzahl; index++) {
+        const button2 = document.createElement('button');
+        button2.classList.add("floated2");
+        button2.classList.add("rotate");
+        button2.id = `button${index}`;
+        button2.innerHTML = "^"
+        document.div2.appendChild(button2);
+    }
 }
 
 
 
-function plus(c){
-    var stelle = (c.id).substring(7,(c.id).length+1);
-    var currentletter = buchstaben
-if (buchstaben.indexOf(currentletter) == -1) {
-    console.log(großbuchstaben.indexOf(loll));
-}
-else{
-    console.log(buchstaben.indexOf(loll));
-}
-}
-
-function minus(f){
-    var currentletter = bu
-}

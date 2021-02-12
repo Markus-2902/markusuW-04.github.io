@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link href="js/functions.js">
     <title>Document</title>
 </head>
 <body>
-    <!--Version3_20210211-->
+    <!--Version4_20210212-->
     <h1>wie viele buttons:</h1> 
     <div>
         <input type="number" name="" id="emailnamebuttonsnumber" min=0.01 max=20 onkeydown="return false" step="0.01">
         <input type="number" name="" id="anbieterbuttonsnumber" min=0.01 max=20 onkeydown="return false" step="0.01">
         <input type="number" name="" id="tldbuttonsnumber" min=0.01 max=4 onkeydown="return false" step="0.01">
-        <input type="submit">
+        <button id="submitbutton" onclick="useadder() "></button>
     </div>
     <div>
         
@@ -56,6 +55,6 @@
         </div>
     </div>
 
-    
+    <script src="js/functions.js"></script> 
 </body>
 </html>

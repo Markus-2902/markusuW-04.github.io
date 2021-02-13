@@ -25,5 +25,8 @@ for (let index = 0; index < buchstaben.length; index++) {
 }*/
 
 //console.log(String.fromCharCode("U+02191"));
-var lol = document.getElementById("e");
-lol.innerHTML = String.fromCharCode("U+02191");
+//var lol = document.getElementById("e");
+//lol.innerHTML = "lolll";
+const loll = document.createElement("p")
+loll.innerHTML = "lollll";
+document.getElementById("rr").appendChild(loll);

@@ -6,17 +6,16 @@ for (let index = 0; index < buchstaben.length; index++) {
 function addbuttons(){
     //email
     var anzahl1 = Math.round(document.getElementById("emailnamebuttonsnumber").innerHTML);
-    
+    const divv = document.getElementById("emailnamebuttonsup");
     for (let index = 0; index < anzahl1; index++) {
-        const divv = document.getElementById("emailnamebuttonsup");
         const button = document.createElement("button");
         button.classList.add("floated2");
         button.id = `button${index}`;
         button.innerHTML = "^"
         document.divv.appendChild(button);
     }
+    const divv2 = document.getElementById("emailnamebuttonsdown");
     for (let index = 0; index < anzahl1; index++) {
-        const divv2 = document.getElementById("emailnamebuttonsdown");
         const button2 = document.createElement("button");
         button.classList.add("floated2");
         button.classList.add("rotate");
@@ -47,15 +46,15 @@ function addbuttons(){
     }
 
     //anbieter
-    const div = document.getElementById("anbieterbuttonsup");
-    const div2 = document.getElementById("anbieterbuttonsdown");
+    const divvv = document.getElementById("anbieterbuttonsup");
+    const divvv2 = document.getElementById("anbieterbuttonsdown");
     var anzahl3 = document.getElementById("anbieterbuttonsnumber").innerHTML;
     for (let index = 0; index < anzahl3; index++) {
         const button = document.createElement("button");
         button.classList.add("floated2");
         button.id = `button${index}`;
         button.innerHTML = "^";
-        document.div.appendChild(button);
+        document.divvv.appendChild(button);
     }
     for (let index = 0; index < anzahl3; index++) {
         const button2 = document.createElement("button");
@@ -63,6 +62,6 @@ function addbuttons(){
         button2.classList.add("rotate");
         button2.id = `button${index}`;
         button2.innerHTML = "^"
-        document.div2.appendChild(button2);
+        document.divvv2.appendChild(button2);
     }
 }

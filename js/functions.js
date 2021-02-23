@@ -5,6 +5,15 @@ for (let index = 0; index < buchstaben.length; index++) {
     großbuchstaben.push(buchstaben[index].toUpperCase());
 }
 
+/*const iup = document.createElement("i");
+iup.classList.add("arrow");
+iup.classList.add("up");
+
+const idown = document.createElement("i");
+idown.classList.add("arrow");
+idown.classList.add("down");*/
+let iup = "<i class='arrow up'></i>"
+let idown = "<i class='arrow down'></i>"
 
 
 /*buchstaben.forEach(element => {
@@ -26,35 +35,44 @@ for (let index = 0; index < buchstaben.length; index++) {
 for (let index = 0; index < großbuchstaben.length; index++) {
     lol2 += großbuchstaben[index];
 }*/
-var submitbutton = document.getElementById("submitbutton");
+/*var submitbutton = document.getElementById("submitbutton");
 function useadder() {
     var anzahl = Math.round(document.getElementById("emailnamebuttonsnumber").innerHTML);
 
     for (let index = 0; index < anzahl; index++) {
         document.getElementById("emailnamebuttonsdown").appendChild()
     }
+}*/
+
+function useadder() {
+    addemailbuttons();
+    addtldbuttons();
+    addanbieterbuttons();
 }
 
 //wieviele buttons:
 function addemailbuttons(){
-    var anzahl = Math.round(document.getElementById("emailnamebuttonsnumber").innerHTML);
+    const divv = document.getElementById("emailnamebuttonsup");
+    const divv2 = document.getElementById("emailnamebuttonsdown");
+    var anzahl = Math.round(document.getElementById("emailnamebuttonsnumber").value);
     
     for (let index = 0; index < anzahl; index++) {
-        const divv = document.getElementById("emailnamebuttonsup");
+        
         const button = document.createElement("button");
         button.classList.add("floated2");
-        button.id = `button${index}`;
-        button.innerHTML = "^"
-        document.divv.appendChild(button);
+        button.id = `ebuttonup${index}`;
+        button.innerHTML = iup;
+        button.onclick = emaillettersup(thisbutton);
+        divv.appendChild(button);
     }
     for (let index = 0; index < anzahl; index++) {
-        const divv2 = document.getElementById("emailnamebuttonsdown");
+        
         const button2 = document.createElement("button");
-        button.classList.add("floated2");
-        button.classList.add("rotate");
-        button2.id = `button${index}`;
-        button2.innerHTML = "^"
-        document.divv2.appendChild(button2);
+        button2.classList.add("floated2");
+        button2.id = `ebuttondown${index}`;
+        button2.innerHTML = idown;
+        button2.onclick = emaillettersdown(thisbutton);
+        divv2.appendChild(button2);
     }
 }
 
@@ -63,47 +81,151 @@ function addemailbuttons(){
 function addtldbuttons(){
     const div = document.getElementById("tldbuttonsup");
     const div2 = document.getElementById("tldbuttonsdown");
-    var anzahl = document.getElementById("tldbuttonsnumber").innerHTML;
+    var anzahl = document.getElementById("tldbuttonsnumber").value;
     for (let index = 0; index < anzahl; index++) {
         const button = document.createElement("button");
         button.classList.add("floated2");
-        button.id = `button${index}`;
-        button.innerHTML = "^"
-        document.div.appendChild(button);
+        button.id = `tbuttonup${index}`;
+        button.innerHTML = iup;
+        button.onclick = tldlettersup(thisbutton);
+        div.appendChild(button);
     }
     
     for (let index = 0; index < anzahl; index++) {
         const button2 = document.createElement("button");
         button2.classList.add("floated2");
-        button2.classList.add("rotate");
-        button2.id = `button${index}`;
-        button2.innerHTML = "^"
-        document.div2.appendChild(button2);
+        button2.id = `tbuttondown${index}`;
+        button2.innerHTML = idown;
+        button2.onclick = tldlettersdown(thisbutton);
+        div2.appendChild(button2);
     }
 }
+
 
 
 
 function addanbieterbuttons(){
-    const div = document.getElementById("anbieterbuttonsup");
-    const div2 = document.getElementById("anbieterbuttonsdown");
-    var anzahl = document.getElementById("anbieterbuttonsnumber").innerHTML;
+    const div3 = document.getElementById("anbieterbuttonsup");
+    const div4 = document.getElementById("anbieterbuttonsdown");
+    var anzahl = document.getElementById("anbieterbuttonsnumber").value;
     for (let index = 0; index < anzahl; index++) {
         const button = document.createElement("button");
         button.classList.add("floated2");
-        button.id = `button${index}`;
-        button.innerHTML = "^";
-        document.div.appendChild(button);
+        button.id = `abuttonup${index}`;
+        button.innerHTML = iup;
+        button.onclick = anbieterlettersup(thisbutton);
+        div3.appendChild(button);
     }
+        
+    
     for (let index = 0; index < anzahl; index++) {
         const button2 = document.createElement("button");
         button2.classList.add("floated2");
-        button2.classList.add("rotate");
-        button2.id = `button${index}`;
-        button2.innerHTML = "^"
-        document.div2.appendChild(button2);
+        button2.id = `abuttondown${index}`;
+        button2.innerHTML = idown;
+        button2.onclick = anbieterlettersdown(thisbutton);
+        div4.appendChild(button2);
     }
+}
+//buchstaben adden:
+let emailname = [];
+let tldname = [];
+let anbietername = [];
+
+function addemailletters() {
+    var anzahl = Math.round(document.getElementById("emailnamebuttonsnumber").value);
+    for (let index = 0; index < anzahl; index++) {
+        emailname.push("a");
+    }
+    document.getElementById("emailname").appendChild(emailname);
+}
+
+function addtldletters() {
+    var anzahl = Math.round(document.getElementById("tldbuttonsnumber").value);
+    for (let index = 0; index < anzahl; index++) {
+        tldname.push("a");
+    }
+    document.getElementById("tldname").appendChild(tldname);
+}
+
+function addanbieterletters() {
+    var anzahl = Math.round(document.getElementById("anbieterbuttonsnumber").value);
+    for (let index = 0; index < anzahl; index++) {
+        anbietername.push("a");
+    }
+    document.getElementById("anbietername").appendChild(anbietername);
 }
 
 
+//buttonpress:
+function emaillettersup(thisbutton) {
+    if (buchstaben.includes(emailname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        emailname[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[emailname[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];
+    }
+    else if (großbuchstaben.includes(emailname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        emailname[((thisbutton.id).substring(10,(thisbutton.id).length))] = großbuchstaben[emailname[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];
+    }
+    else{
+        console.log("emaillettersup geht nicht")
+    }
+}
 
+function emaillettersdown(thisbutton) {
+    if (buchstaben.includes(emailname[((thisbutton.id).substring(12,(thisbutton.id).length))])) {
+        emailname[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[emailname[((thisbutton.id).substring(12,(thisbutton.id).length))]-1];
+    }
+    else if (großbuchstaben.includes(emailname[((thisbutton.id).substring(12,(thisbutton.id).length))])) {
+        emailname[((thisbutton.id).substring(10,(thisbutton.id).length))] = großbuchstaben[emailname[((thisbutton.id).substring(12,(thisbutton.id).length))]-1];
+    }
+    else{
+        console.log("emaillettersdown geht nicht")
+    }
+}
+
+function tldlettersup(thisbutton) {
+    if (buchstaben.includes(tldname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        tldname[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[tldname[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];
+    }
+    else if (großbuchstaben.includes(tldname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        tldname[((thisbutton.id).substring(10,(thisbutton.id).length))] = großbuchstaben[tld[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];
+    }
+    else{
+        console.log("tldlettersup geht nicht");
+    }
+}
+
+function tldlettersdown(thisbutton) {
+    if (buchstaben.includes(tldname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        tldname[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[tldname[((thisbutton.id).substring(10,(thisbutton.id).length))]-1];
+    }
+    else if (großbuchstaben.includes(tldname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        tldname[((thisbutton.id).substring(10,(thisbutton.id).length))] = großbuchstaben[tld[((thisbutton.id).substring(10,(thisbutton.id).length))]-1];
+    }
+    else{
+        console.log("tldlettersdown geht nicht");
+    }
+}
+
+function anbieterlettersup(thisbutton) {
+    if (buchstaben.includes(anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];
+    }
+    else if (großbuchstaben.includes(anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))] = großbuchstaben[tld[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];
+    }
+    else{
+        console.log("anbieterlettersup geht nicht");
+    }
+}
+
+function anbieterlettersdown(thisbutton) {
+    if (buchstaben.includes(anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))]-1];
+    }
+    else if (großbuchstaben.includes(anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
+        anbietername[((thisbutton.id).substring(10,(thisbutton.id).length))] = großbuchstaben[tld[((thisbutton.id).substring(10,(thisbutton.id).length))]-1];
+    }
+    else{
+        console.log("anbieterlettersdown geht nicht");
+    }
+}

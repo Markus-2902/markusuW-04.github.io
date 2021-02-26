@@ -51,6 +51,7 @@ function useadder() {
 }
 
 //wieviele buttons:
+//holt sich die divs wo die buttons die im alphabet runterzählen und raufzählen sollen appended werden sollen - sowie auch die gerundete anzahl, wieviel zeichen die email/der anbieter/die tld haben soll, und erstellt die buttons
 function addemailbuttons(){
     const divv = document.getElementById("emailnamebuttonsup");
     const divv2 = document.getElementById("emailnamebuttonsdown");
@@ -127,7 +128,10 @@ function addanbieterbuttons(){
         div4.appendChild(button2);
     }
 }
+
+
 //buchstaben adden:
+//hier werden je nach der anzahl je ein "a" in eine array hinzugefügt, von der man dann nachher einfach die stelle holen kann, und in den zwei alphabet arrays immer den jetzigen buchstaben + 1 hinzufügen kann
 let emailname = [];
 let tldname = [];
 let anbietername = [];
@@ -158,6 +162,10 @@ function addanbieterletters() {
 
 
 //buttonpress:
+//das sind die funktionen die aufgerufen werden, wenn der down oder up button gedrückt wird. jeder button hat eine id in der auch die stelle des buttons/buchstabens drinnen steht
+//also z.b. der erste up button von dem emailnamen hat die id ebuttonup0. dann wird mit substring alles von e bist p gelöscht, und nur die 0 als index genommen, um zu wissen
+//welches a in den arrays gemeint ist (oder welcher buchstabe auch immer). dann wird einfach das gleiche gemacht, nur das dann der index + 1 genommen wird, und z.b 
+//das "a" an der stelle 0 mit einem "b" ersetzt wird
 function emaillettersup(thisbutton) {
     if (buchstaben.includes(emailname[((thisbutton.id).substring(10,(thisbutton.id).length))])) {
         emailname[((thisbutton.id).substring(10,(thisbutton.id).length))] = buchstaben[emailname[((thisbutton.id).substring(10,(thisbutton.id).length))]+1];

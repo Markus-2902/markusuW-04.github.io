@@ -7,8 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <!--Version6_20210223-->
+    <!--Version7_20210226-->
     <h1>wie viele buttons:</h1> 
+    <!--Hier kann man in 0,01er schritten auswählen, wieviel zeichen der email name(z.b. utom), der anbieter(z.b. gmail) und die topleveldomain(z.b. net) hat-->
     <div>
         <input type="number" name="" id="emailnamebuttonsnumber" min=0.01 max=20 onkeydown="" step="0.01">
         <input type="number" name="" id="anbieterbuttonsnumber" min=0.01 max=20 onkeydown="" step="0.01">
@@ -16,7 +17,7 @@
         <button onclick="useadder()">Submit</button>
     </div>
     <div>
-        
+        <!--hier sollen die buchstaben stehen-->
         <div>
             <input type="email" id="emailname" name="email" value="" class="floated2" placeholder="emailname" readonly>
             <label class="floated3">@</label>
@@ -26,6 +27,7 @@
         </div>
         <br>
         <br>
+        <!--ab hier werden die buttons, je einer nach oben und unten, hinzugefügt-->
         emailname:
         <div id="emailnamebuttons">
             <div id="emailnamebuttonsup">

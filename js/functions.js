@@ -35,8 +35,13 @@ for (let index = 0; index < buchstaben.length; index++) {
 for (let index = 0; index < großbuchstaben.length; index++) {
     lol2 += großbuchstaben[index];
 }*/
+<<<<<<< HEAD
 /*var submitbutton = document.getElementById("submitbutton");
 function useadder() {
+=======
+var submitbutton = document.getElementById("submitbutton");
+/*function useadder() {
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
     var anzahl = Math.round(document.getElementById("emailnamebuttonsnumber").innerHTML);
 
     for (let index = 0; index < anzahl; index++) {
@@ -44,21 +49,31 @@ function useadder() {
     }
 }*/
 
+<<<<<<< HEAD
 function useadder() {
     addemailbuttons();
     addtldbuttons();
     addanbieterbuttons();
 }
+=======
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
 
 //wieviele buttons:
 //holt sich die divs wo die buttons die im alphabet runterzählen und raufzählen sollen appended werden sollen - sowie auch die gerundete anzahl, wieviel zeichen die email/der anbieter/die tld haben soll, und erstellt die buttons
 function addemailbuttons(){
+<<<<<<< HEAD
     const divv = document.getElementById("emailnamebuttonsup");
     const divv2 = document.getElementById("emailnamebuttonsdown");
     var anzahl = Math.round(document.getElementById("emailnamebuttonsnumber").value);
     
     for (let index = 0; index < anzahl; index++) {
         
+=======
+    var anzahl1 = Math.round(document.getElementById("emailnamebuttonsnumber").innerHTML);
+    
+    for (let index = 0; index < anzahl1; index++) {
+        const divv = document.getElementById("emailnamebuttonsup");
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
         const button = document.createElement("button");
         button.classList.add("floated2");
         button.id = `ebuttonup${index}`;
@@ -66,8 +81,13 @@ function addemailbuttons(){
         button.onclick = emaillettersup(thisbutton);
         divv.appendChild(button);
     }
+<<<<<<< HEAD
     for (let index = 0; index < anzahl; index++) {
         
+=======
+    for (let index = 0; index < anzahl1; index++) {
+        const divv2 = document.getElementById("emailnamebuttonsdown");
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
         const button2 = document.createElement("button");
         button2.classList.add("floated2");
         button2.id = `ebuttondown${index}`;
@@ -82,8 +102,13 @@ function addemailbuttons(){
 function addtldbuttons(){
     const div = document.getElementById("tldbuttonsup");
     const div2 = document.getElementById("tldbuttonsdown");
+<<<<<<< HEAD
     var anzahl = document.getElementById("tldbuttonsnumber").value;
     for (let index = 0; index < anzahl; index++) {
+=======
+    var anzahl2 = document.getElementById("tldbuttonsnumber").innerHTML;
+    for (let index = 0; index < anzahl2; index++) {
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
         const button = document.createElement("button");
         button.classList.add("floated2");
         button.id = `tbuttonup${index}`;
@@ -92,7 +117,7 @@ function addtldbuttons(){
         div.appendChild(button);
     }
     
-    for (let index = 0; index < anzahl; index++) {
+    for (let index = 0; index < anzahl2; index++) {
         const button2 = document.createElement("button");
         button2.classList.add("floated2");
         button2.id = `tbuttondown${index}`;
@@ -106,10 +131,17 @@ function addtldbuttons(){
 
 
 function addanbieterbuttons(){
+<<<<<<< HEAD
     const div3 = document.getElementById("anbieterbuttonsup");
     const div4 = document.getElementById("anbieterbuttonsdown");
     var anzahl = document.getElementById("anbieterbuttonsnumber").value;
     for (let index = 0; index < anzahl; index++) {
+=======
+    const div = document.getElementById("anbieterbuttonsup");
+    const div2 = document.getElementById("anbieterbuttonsdown");
+    var anzahl3 = document.getElementById("anbieterbuttonsnumber").innerHTML;
+    for (let index = 0; index < anzahl3; index++) {
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
         const button = document.createElement("button");
         button.classList.add("floated2");
         button.id = `abuttonup${index}`;
@@ -117,9 +149,13 @@ function addanbieterbuttons(){
         button.onclick = anbieterlettersup(thisbutton);
         div3.appendChild(button);
     }
+<<<<<<< HEAD
         
     
     for (let index = 0; index < anzahl; index++) {
+=======
+    for (let index = 0; index < anzahl3; index++) {
+>>>>>>> e9ea00feeae0e35e750d0b02e6ceda897a19874a
         const button2 = document.createElement("button");
         button2.classList.add("floated2");
         button2.id = `abuttondown${index}`;
